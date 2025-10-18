@@ -23,7 +23,7 @@ A simple RESTful API endpoint that returns profile information along with a dyna
 
    ```bash
    git clone https://github.com/Rifushigi/catme
-   cd profile-cat-api
+   cd catme
    ```
 
 2. **Create and activate a virtual environment:**
@@ -170,7 +170,7 @@ curl http://localhost:8000/health
 ## Project Structure
 
 ```
-profile-cat-api/
+catme/
 ├── main.py              # Main FastAPI application
 ├── requirements.txt     # Python dependencies
 ├── .env                 # Environment configuration
