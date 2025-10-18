@@ -121,7 +121,7 @@ Health check endpoint for monitoring.
 ```json
 {
   "status": "healthy",
-  "timestamp": "2025-10-18T12:34:56.789Z"
+  "timestamp": "2025-10-18T14:36:55.135910+00:00"
 }
 ```
 
