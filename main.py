@@ -115,7 +115,7 @@ async def get_profile(request: Request):
                 "name": PROFILE_INFO["name"],
                 "stack": PROFILE_INFO["stack"]
             },
-            timestamp: timestamp,
+            "timestamp": timestamp,
             "fact": cat_fact
         }
 
