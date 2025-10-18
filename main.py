@@ -104,7 +104,7 @@ async def get_profile(request: Request):
         dict: JSON response containing profile info and cat fact
     """
     try:
-        timestamp = datetime.now(timezone.utc).isoformat
+        timestamp = datetime.now(timezone.utc).isoformat()
 
         cat_fact = await fetch_cat_fact()
 
@@ -137,7 +137,7 @@ async def get_profile(request: Request):
 @limiter.limit("10/minute")
 async def health_check(request: Request):
     """Health check endpoint"""
-    return {"status": "healthy", "timestamp": datetime.now(timezone.utc).isoformat}
+    return {"status": "healthy", "timestamp": datetime.now(timezone.utc).isoformat()}
 
 if __name__ == "__main__":
     import uvicorn
