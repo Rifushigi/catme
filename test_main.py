@@ -14,9 +14,9 @@ class TestHealthEndpoint:
         assert response.status_code == 200
         data = response.json()
         assert data.get("status") == "healthy"
-        timestamp_key = next((k for k in data.keys() if k.endswith("+00:00")), None)
-        assert timestamp_key is not None
-        assert data[timestamp_key].endswith("+00:00")
+        assert "timestamp" in data
+        assert data["timestamp"].endswith("+00:00")
+
 
 
 class TestMeEndpoint:
