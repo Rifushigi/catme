@@ -64,7 +64,6 @@ async def fetch_cat_fact() -> str:
             response.raise_for_status()
 
             data = response.json()
-            logger.info(data)
             cat_fact = data.get("fact", "")
 
             if not cat_fact:
