@@ -129,8 +129,8 @@ Health check endpoint for monitoring.
 
 | Variable | Description | Default Value |
 |----------|-------------|---------------|
-| `PROFILE_EMAIL` | Your email address | `user@example.com` |
-| `PROFILE_NAME` | Your full name | `John Doe` |
+| `PROFILE_EMAIL` | Your email address | `rifushigi@dev.com` |
+| `PROFILE_NAME` | Your full name | `Rifushigi` |
 | `PROFILE_STACK` | Your backend stack | `Python/FastAPI` |
 | `HOST` | Server host | `0.0.0.0` |
 | `PORT` | Server port | `8000` |
