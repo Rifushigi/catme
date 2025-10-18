@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi import Request
 
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
@@ -95,7 +96,7 @@ async def fetch_cat_fact() -> str:
     
 @app.get("/me", response_model=Dict[str, any])
 @limiter.limit("5/minute")
-async def get_profile():
+async def get_profile(request: Request):
     """
     Get profile information along with a dynamic cat fact.
     
@@ -134,7 +135,7 @@ async def get_profile():
     
 @app.get("/health")
 @limiter.limit("10/minute")
-async def health_check():
+async def health_check(request: Request):
     """Health check endpoint"""
     return {"status": "healthy", "timestamp": datetime.now(timezone.utc).isoformat}
 
