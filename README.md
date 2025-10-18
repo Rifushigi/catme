@@ -1,4 +1,4 @@
-# Profile Cat API
+# Catme API
 
 A simple RESTful API endpoint that returns profile information along with a dynamic cat fact fetched from an external API. Built with FastAPI and Python.
 
