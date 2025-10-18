@@ -94,7 +94,7 @@ async def fetch_cat_fact() -> str:
             detail="Failed to fetch cat fact from external API"
         )
     
-@app.get("/me", response_model=Dict[str, any])
+@app.get("/me", response_model=Dict[str, Any])
 @limiter.limit("5/minute")
 async def get_profile(request: Request):
     """
