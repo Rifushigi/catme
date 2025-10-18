@@ -22,7 +22,7 @@ A simple RESTful API endpoint that returns profile information along with a dyna
 1. **Clone the repository:**
 
    ```bash
-   git clone <https://github.com/Rifushigi/catme>
+   git clone https://github.com/Rifushigi/catme
    cd profile-cat-api
    ```
 
