@@ -45,7 +45,7 @@ PROFILE_INFO = {
 }
 
 CAT_URI = os.getenv("CAT_FACTS_API_URL", "https://catfact.ninja/fact")
-API_TIMEOUT = os.getenv("API_TIMEOUT", 10)
+API_TIMEOUT = float(os.getenv("API_TIMEOUT", 10))
 
 async def fetch_cat_fact() -> str:
     """
@@ -64,6 +64,7 @@ async def fetch_cat_fact() -> str:
             response.raise_for_status()
 
             data = response.json()
+            logger.info(data)
             cat_fact = data.get("fact", "")
 
             if not cat_fact:
